@@ -12,12 +12,13 @@ const styles={
     }
 }
 
-export default ({exercises})=>
+export default ({exercises,category})=>
 <Grid container>
     <Grid item sm>
     <Paper style={styles.Paper}>
         {exercises.map(([group,exercises])=>
-        <Fragment>
+        !category||category===group
+        ?<Fragment>
         <Typography variant="h6" style={{textTransform:'capitalize'}}>
             {group}
         </Typography>
@@ -28,8 +29,10 @@ export default ({exercises})=>
                 </ListItem>
                 )}
         
-      </List>
-      </Fragment>
+        </List>
+        </Fragment>
+        :null
+        
         )}
     </Paper>
     </Grid>
