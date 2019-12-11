@@ -39,10 +39,10 @@ export default class extends Component {
                 exercises={exercises}
             />
 
-            <Footer 
+            <Footer
                 category={category}
                 muscles={muscles}
-                onSelect={this.handleCategorySelected} 
+                onSelect={this.handleCategorySelected}
             />
         </Fragment>
     }
